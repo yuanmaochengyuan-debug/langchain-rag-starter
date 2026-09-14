@@ -1,19 +1,25 @@
 from langchain.chains import RetrievalQA
-from langchain_google_genai import ChatGoogleGenerativeAI
-from app.core.config import settings
+from langchain_community.chat_models import ChatOllama
+
 from app.core.prompts import RAG_PROMPT
 from app.services.vectorstore import get_vectorstore
 
+
 def get_llm():
-    return ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash-lite",
-        google_api_key=settings.gemini_api_key,
+    return ChatOllama(
+        model="qwen2.5:3b",
+        base_url="http://localhost:11434",
         temperature=0.3,
     )
 
+
 def build_rag_chain() -> RetrievalQA:
     vectorstore = get_vectorstore()
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
+
+    retriever = vectorstore.as_retriever(
+        search_kwargs={"k": 4}
+    )
+
     return RetrievalQA.from_chain_type(
         llm=get_llm(),
         chain_type="stuff",
