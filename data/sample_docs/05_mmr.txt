@@ -1,0 +1,13 @@
+MMR 多样化检索
+
+最大边际相关性（Maximum Marginal Relevance，MMR）是一种兼顾相关性和结果多样性的检索策略。
+MMR 不只是寻找与问题最相似的文本，还会降低多个检索结果之间的内容重复程度。
+
+典型 MMR 流程先从向量库中取出 fetch_k 个候选文本，再从这些候选中选择最终的 k 个结果。
+因此 fetch_k 一般大于最终的 Top-K。
+
+lambda_mult 用于控制相关性和多样性之间的权衡。
+lambda_mult 越偏向相关性，结果越接近普通相似度检索；越强调多样性，则更倾向于选择彼此不同的文本块。
+
+本项目默认设置 mmr_fetch_k 为 12，mmr_lambda_mult 为 0.5。
+最终实验比较 Similarity 和 MMR 在 Top-K 为 3、4、5 时的检索效果。

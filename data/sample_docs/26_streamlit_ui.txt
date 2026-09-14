@@ -1,0 +1,9 @@
+Streamlit 前端
+
+Streamlit 用于快速构建本项目的 Web 问答界面。
+
+用户在输入框中输入问题，前端使用 HTTP POST 请求调用 FastAPI。
+收到响应后，页面展示 answer。
+
+改进后的前端还会显示 Sources。
+每个来源可以作为展开区域，其中展示文件名、页码和 snippet，使用户能够查看回答依据。

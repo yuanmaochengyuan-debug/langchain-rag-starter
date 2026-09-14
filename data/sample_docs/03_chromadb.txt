@@ -1,0 +1,14 @@
+ChromaDB 向量数据库
+
+ChromaDB 是面向 Embedding 数据的向量数据库，可用于存储文本向量及其 metadata。
+在本项目中，ChromaDB 作为 RAG 系统的向量存储组件。
+
+文档经过切分和向量化以后，每个 chunk 会写入 ChromaDB。
+除了向量以外，还可以保存 source、source_file、page、file_sha256 等元数据。
+这些 metadata 可以用于来源追踪、过滤检索以及文档版本管理。
+
+本项目使用持久化目录 ./chroma_db 保存本地向量库。
+这样程序重新启动以后，不需要每次都重新向量化全部文档。
+
+ChromaDB 可以通过 similarity search 返回与问题最相似的若干文本块。
+同时，LangChain 也可以把 Chroma 包装成 retriever，供 RetrievalQA 等 RAG 链调用。

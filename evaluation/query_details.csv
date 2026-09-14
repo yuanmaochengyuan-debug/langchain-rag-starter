@@ -1,0 +1,301 @@
+﻿id,retrieval_type,top_k,question,gold_source,retrieved_sources,hit,reciprocal_rank,latency_ms
+1,similarity,3,RAG 的主要作用是什么？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 01_rag_basics.txt,1,0.3333,3428.32
+2,similarity,3,为什么更新 RAG 知识库通常不需要重新训练大语言模型？,01_rag_basics.txt,11_rag_hallucination.txt | 01_rag_basics.txt | rag_test.txt,1,0.5,2122.03
+3,similarity,3,Embedding 在 RAG 系统中主要负责什么？,02_embeddings.txt,01_rag_basics.txt | 11_rag_hallucination.txt | rag_test.txt,0,0.0,2105.14
+4,similarity,3,当前项目使用的本地文本向量模型是什么？,02_embeddings.txt,16_vector_metadata_filter.txt | 23_ollama_privacy.txt | 17_topk_tradeoff.txt,0,0.0,2091.67
+5,similarity,3,本项目使用哪个数据库存储文本向量？,03_chromadb.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 17_topk_tradeoff.txt,0,0.0,2104.77
+6,similarity,3,ChromaDB 除了向量以外还可以保存哪些信息？,03_chromadb.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt,1,1.0,2109.05
+7,similarity,3,Similarity Search 中的 Top-K 表示什么？,04_similarity.txt,04_similarity.txt | 18_similarity_redundancy.txt | 17_topk_tradeoff.txt,1,1.0,2133.43
+8,similarity,3,普通相似度检索可能存在哪种结果冗余问题？,04_similarity.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt,0,0.0,2187.34
+9,similarity,3,MMR 检索相比普通相似度检索增加了什么考虑？,05_mmr.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 20_mmr_lambda.txt,0,0.0,2095.31
+10,similarity,3,MMR 为什么通常需要先获取 fetch_k 个候选文本？,05_mmr.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt,1,0.5,2065.81
+11,similarity,3,本项目使用什么工具切分长文档？,06_chunking.txt,16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 12_rag_metadata.txt,0,0.0,2086.88
+12,similarity,3,文本切分时保留 overlap 有什么作用？,06_chunking.txt,21_chunk_overlap.txt | 06_chunking.txt | 22_chunk_size.txt,1,0.5,2076.88
+13,similarity,3,本项目使用 Ollama 的主要目的是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | rag_test.txt,1,1.0,2093.16
+14,similarity,3,Ollama 默认的本地服务地址是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | rag_test.txt,1,1.0,2126.81
+15,similarity,3,系统的后端接口框架和前端框架分别是什么？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 08_fastapi_streamlit.txt | 17_topk_tradeoff.txt,1,0.5,2072.46
+16,similarity,3,改进后的 sources 会返回哪些来源信息？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 08_fastapi_streamlit.txt | 18_similarity_redundancy.txt,1,0.5,2066.28
+17,similarity,3,系统如何判断一个文件是否已经入库且没有发生变化？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt,0,0.0,2075.05
+18,similarity,3,文件内容发生变化后增量入库会执行什么流程？,09_incremental_ingestion.txt,26_streamlit_ui.txt | 14_semantic_vs_keyword.txt | 08_fastapi_streamlit.txt,0,0.0,2087.73
+19,similarity,3,Hit@K 主要评价检索系统的什么能力？,10_evaluation.txt,29_hit_at_k.txt | 17_topk_tradeoff.txt | 10_evaluation.txt,1,0.3333,2097.92
+20,similarity,3,MRR 和 Hit@K 的关注重点有什么区别？,10_evaluation.txt,30_mrr.txt | 10_evaluation.txt | 29_hit_at_k.txt,1,0.5,2199.59
+21,similarity,3,RAG 为什么能够降低大语言模型产生幻觉的风险？,11_rag_hallucination.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt,1,1.0,2061.93
+22,similarity,3,如果检索阶段返回了错误文档，生成结果可能出现什么问题？,11_rag_hallucination.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt,1,0.5,2086.64
+23,similarity,3,向量数据库中的 metadata 可以用于哪些功能？,12_rag_metadata.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt,1,0.5,2117.21
+24,similarity,3,PDF 文档的页码信息通常存放在哪里？,12_rag_metadata.txt,12_rag_metadata.txt | 26_streamlit_ui.txt | 11_rag_hallucination.txt,1,1.0,2174.09
+25,similarity,3,当前 nomic-embed-text 输出的向量维度是多少？,13_embedding_dimension.txt,13_embedding_dimension.txt | 23_ollama_privacy.txt | 02_embeddings.txt,1,1.0,2067.77
+26,similarity,3,为什么更换 Embedding 模型后通常需要重新构建向量库？,13_embedding_dimension.txt,13_embedding_dimension.txt | 02_embeddings.txt | 07_ollama.txt,1,1.0,2060.3
+27,similarity,3,语义检索相比关键词检索有什么优势？,14_semantic_vs_keyword.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 16_vector_metadata_filter.txt,1,0.5,2085.7
+28,similarity,3,表达方式不同但意思相近的问题为什么仍可能被检索出来？,14_semantic_vs_keyword.txt,17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 09_incremental_ingestion.txt,1,0.5,2151.75
+29,similarity,3,ChromaDB 持久化存储有什么作用？,15_chroma_persistence.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt,1,0.5,2081.68
+30,similarity,3,为什么 chroma_db 目录不适合提交到 GitHub？,15_chroma_persistence.txt,15_chroma_persistence.txt | 03_chromadb.txt | 28_manifest.txt,1,1.0,2095.27
+31,similarity,3,向量数据库的 metadata filter 可以实现什么功能？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt,1,1.0,2187.5
+32,similarity,3,增量更新时系统如何定位需要删除的旧版本向量？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 09_incremental_ingestion.txt | 12_rag_metadata.txt,1,1.0,2067.61
+33,similarity,3,Top-K 设置得过小可能导致什么问题？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt,1,1.0,2087.89
+34,similarity,3,为什么不存在对所有数据集都最优的固定 Top-K？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt,1,1.0,2068.21
+35,similarity,3,Similarity Search 为什么可能返回多个内容高度重复的 chunk？,18_similarity_redundancy.txt,18_similarity_redundancy.txt | 04_similarity.txt | 21_chunk_overlap.txt,1,1.0,2082.53
+36,similarity,3,MMR 能缓解普通相似度检索中的什么问题？,18_similarity_redundancy.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 05_mmr.txt,0,0.0,2099.29
+37,similarity,3,MMR 中 fetch_k 和最终 k 的关系通常是什么？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 05_mmr.txt | 29_hit_at_k.txt,1,1.0,2060.29
+38,similarity,3,本项目的默认 mmr_fetch_k 设置为多少？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt,1,1.0,2067.75
+39,similarity,3,MMR 中 lambda_mult 用来控制什么？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 19_mmr_fetchk.txt,1,1.0,2083.44
+40,similarity,3,本项目默认的 lambda_mult 是多少？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 16_vector_metadata_filter.txt,1,1.0,2090.91
+41,similarity,3,本项目的 chunk_overlap 设置为多少？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt,1,1.0,2151.71
+42,similarity,3,chunk_overlap 设置过大会带来什么问题？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt,1,1.0,2172.28
+43,similarity,3,本项目默认的 chunk_size 是多少？,22_chunk_size.txt,22_chunk_size.txt | 21_chunk_overlap.txt | 06_chunking.txt,1,1.0,2065.5
+44,similarity,3,为什么比较检索算法时应该保持 chunk_size 不变？,22_chunk_size.txt,22_chunk_size.txt | 06_chunking.txt | 21_chunk_overlap.txt,1,1.0,2064.24
+45,similarity,3,使用本地 Ollama 对知识库数据隐私有什么好处？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt,1,0.5,2082.21
+46,similarity,3,当前项目中哪些模型通过 Ollama 在本地运行？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt,1,0.5,2105.79
+47,similarity,3,Qwen2.5 3B 在这个 RAG 系统中承担什么职责？,24_qwen_role.txt,24_qwen_role.txt | rag_test.txt | 11_rag_hallucination.txt,1,1.0,2091.45
+48,similarity,3,Hit@K 和 MRR 主要评测生成模型还是检索器？,24_qwen_role.txt,29_hit_at_k.txt | 10_evaluation.txt | 30_mrr.txt,0,0.0,2079.66
+49,similarity,3,系统的问答 API 路径是什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt,1,1.0,2146.7
+50,similarity,3,FastAPI 的 Swagger 页面在开发中可以用来做什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt,1,1.0,2072.59
+1,similarity,4,RAG 的主要作用是什么？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 01_rag_basics.txt | rag_test.txt,1,0.3333,2081.48
+2,similarity,4,为什么更新 RAG 知识库通常不需要重新训练大语言模型？,01_rag_basics.txt,11_rag_hallucination.txt | 01_rag_basics.txt | rag_test.txt | 12_rag_metadata.txt,1,0.5,2086.09
+3,similarity,4,Embedding 在 RAG 系统中主要负责什么？,02_embeddings.txt,01_rag_basics.txt | 11_rag_hallucination.txt | rag_test.txt | 02_embeddings.txt,1,0.25,2135.63
+4,similarity,4,当前项目使用的本地文本向量模型是什么？,02_embeddings.txt,16_vector_metadata_filter.txt | 23_ollama_privacy.txt | 17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt,0,0.0,2183.7
+5,similarity,4,本项目使用哪个数据库存储文本向量？,03_chromadb.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 17_topk_tradeoff.txt | 04_similarity.txt,0,0.0,2093.51
+6,similarity,4,ChromaDB 除了向量以外还可以保存哪些信息？,03_chromadb.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt | rag_test.txt,1,1.0,2106.53
+7,similarity,4,Similarity Search 中的 Top-K 表示什么？,04_similarity.txt,04_similarity.txt | 18_similarity_redundancy.txt | 17_topk_tradeoff.txt | 20_mmr_lambda.txt,1,1.0,2044.16
+8,similarity,4,普通相似度检索可能存在哪种结果冗余问题？,04_similarity.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 17_topk_tradeoff.txt,0,0.0,2062.17
+9,similarity,4,MMR 检索相比普通相似度检索增加了什么考虑？,05_mmr.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 20_mmr_lambda.txt | 05_mmr.txt,1,0.25,2084.35
+10,similarity,4,MMR 为什么通常需要先获取 fetch_k 个候选文本？,05_mmr.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt | 10_evaluation.txt,1,0.5,2177.51
+11,similarity,4,本项目使用什么工具切分长文档？,06_chunking.txt,16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 12_rag_metadata.txt | 14_semantic_vs_keyword.txt,0,0.0,2066.36
+12,similarity,4,文本切分时保留 overlap 有什么作用？,06_chunking.txt,21_chunk_overlap.txt | 06_chunking.txt | 22_chunk_size.txt | 14_semantic_vs_keyword.txt,1,0.5,2081.32
+13,similarity,4,本项目使用 Ollama 的主要目的是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | rag_test.txt | 26_streamlit_ui.txt,1,1.0,2101.71
+14,similarity,4,Ollama 默认的本地服务地址是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | rag_test.txt | 26_streamlit_ui.txt,1,1.0,2090.7
+15,similarity,4,系统的后端接口框架和前端框架分别是什么？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 08_fastapi_streamlit.txt | 17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt,1,0.5,2186.86
+16,similarity,4,改进后的 sources 会返回哪些来源信息？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 08_fastapi_streamlit.txt | 18_similarity_redundancy.txt | 11_rag_hallucination.txt,1,0.5,2070.4
+17,similarity,4,系统如何判断一个文件是否已经入库且没有发生变化？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt | 16_vector_metadata_filter.txt,0,0.0,2093.82
+18,similarity,4,文件内容发生变化后增量入库会执行什么流程？,09_incremental_ingestion.txt,26_streamlit_ui.txt | 14_semantic_vs_keyword.txt | 08_fastapi_streamlit.txt | 16_vector_metadata_filter.txt,0,0.0,2097.39
+19,similarity,4,Hit@K 主要评价检索系统的什么能力？,10_evaluation.txt,29_hit_at_k.txt | 17_topk_tradeoff.txt | 10_evaluation.txt | 24_qwen_role.txt,1,0.3333,2110.09
+20,similarity,4,MRR 和 Hit@K 的关注重点有什么区别？,10_evaluation.txt,30_mrr.txt | 10_evaluation.txt | 29_hit_at_k.txt | 17_topk_tradeoff.txt,1,0.5,2229.96
+21,similarity,4,RAG 为什么能够降低大语言模型产生幻觉的风险？,11_rag_hallucination.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt | rag_test.txt,1,1.0,2094.91
+22,similarity,4,如果检索阶段返回了错误文档，生成结果可能出现什么问题？,11_rag_hallucination.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt | 16_vector_metadata_filter.txt,1,0.5,2097.65
+23,similarity,4,向量数据库中的 metadata 可以用于哪些功能？,12_rag_metadata.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt | 01_rag_basics.txt,1,0.5,2106.99
+24,similarity,4,PDF 文档的页码信息通常存放在哪里？,12_rag_metadata.txt,12_rag_metadata.txt | 26_streamlit_ui.txt | 11_rag_hallucination.txt | 08_fastapi_streamlit.txt,1,1.0,2180.26
+25,similarity,4,当前 nomic-embed-text 输出的向量维度是多少？,13_embedding_dimension.txt,13_embedding_dimension.txt | 23_ollama_privacy.txt | 02_embeddings.txt | 07_ollama.txt,1,1.0,2192.35
+26,similarity,4,为什么更换 Embedding 模型后通常需要重新构建向量库？,13_embedding_dimension.txt,13_embedding_dimension.txt | 02_embeddings.txt | 07_ollama.txt | 14_semantic_vs_keyword.txt,1,1.0,2090.64
+27,similarity,4,语义检索相比关键词检索有什么优势？,14_semantic_vs_keyword.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 16_vector_metadata_filter.txt | 26_streamlit_ui.txt,1,0.5,2091.74
+28,similarity,4,表达方式不同但意思相近的问题为什么仍可能被检索出来？,14_semantic_vs_keyword.txt,17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 09_incremental_ingestion.txt | 13_embedding_dimension.txt,1,0.5,2062.54
+29,similarity,4,ChromaDB 持久化存储有什么作用？,15_chroma_persistence.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt | rag_test.txt,1,0.5,2068.36
+30,similarity,4,为什么 chroma_db 目录不适合提交到 GitHub？,15_chroma_persistence.txt,15_chroma_persistence.txt | 03_chromadb.txt | 28_manifest.txt | 09_incremental_ingestion.txt,1,1.0,2075.09
+31,similarity,4,向量数据库的 metadata filter 可以实现什么功能？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt | 18_similarity_redundancy.txt,1,1.0,2090.35
+32,similarity,4,增量更新时系统如何定位需要删除的旧版本向量？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 09_incremental_ingestion.txt | 12_rag_metadata.txt | 17_topk_tradeoff.txt,1,1.0,2101.2
+33,similarity,4,Top-K 设置得过小可能导致什么问题？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt,1,1.0,2055.23
+34,similarity,4,为什么不存在对所有数据集都最优的固定 Top-K？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt,1,1.0,2063.6
+35,similarity,4,Similarity Search 为什么可能返回多个内容高度重复的 chunk？,18_similarity_redundancy.txt,18_similarity_redundancy.txt | 04_similarity.txt | 21_chunk_overlap.txt | 20_mmr_lambda.txt,1,1.0,2084.59
+36,similarity,4,MMR 能缓解普通相似度检索中的什么问题？,18_similarity_redundancy.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 05_mmr.txt | 18_similarity_redundancy.txt,1,0.25,2083.18
+37,similarity,4,MMR 中 fetch_k 和最终 k 的关系通常是什么？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 05_mmr.txt | 29_hit_at_k.txt | 10_evaluation.txt,1,1.0,2095.5
+38,similarity,4,本项目的默认 mmr_fetch_k 设置为多少？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt | 17_topk_tradeoff.txt,1,1.0,2064.48
+39,similarity,4,MMR 中 lambda_mult 用来控制什么？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 19_mmr_fetchk.txt | 18_similarity_redundancy.txt,1,1.0,2070.79
+40,similarity,4,本项目默认的 lambda_mult 是多少？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 16_vector_metadata_filter.txt | 17_topk_tradeoff.txt,1,1.0,2073.53
+41,similarity,4,本项目的 chunk_overlap 设置为多少？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 16_vector_metadata_filter.txt,1,1.0,2067.01
+42,similarity,4,chunk_overlap 设置过大会带来什么问题？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 18_similarity_redundancy.txt,1,1.0,2057.0
+43,similarity,4,本项目默认的 chunk_size 是多少？,22_chunk_size.txt,22_chunk_size.txt | 21_chunk_overlap.txt | 06_chunking.txt | 16_vector_metadata_filter.txt,1,1.0,2081.84
+44,similarity,4,为什么比较检索算法时应该保持 chunk_size 不变？,22_chunk_size.txt,22_chunk_size.txt | 06_chunking.txt | 21_chunk_overlap.txt | 16_vector_metadata_filter.txt,1,1.0,2200.06
+45,similarity,4,使用本地 Ollama 对知识库数据隐私有什么好处？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | rag_test.txt,1,0.5,2083.46
+46,similarity,4,当前项目中哪些模型通过 Ollama 在本地运行？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 09_incremental_ingestion.txt,1,0.5,2059.36
+47,similarity,4,Qwen2.5 3B 在这个 RAG 系统中承担什么职责？,24_qwen_role.txt,24_qwen_role.txt | rag_test.txt | 11_rag_hallucination.txt | 01_rag_basics.txt,1,1.0,2068.66
+48,similarity,4,Hit@K 和 MRR 主要评测生成模型还是检索器？,24_qwen_role.txt,29_hit_at_k.txt | 10_evaluation.txt | 30_mrr.txt | 17_topk_tradeoff.txt,0,0.0,2080.87
+49,similarity,4,系统的问答 API 路径是什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt | 07_ollama.txt,1,1.0,2100.61
+50,similarity,4,FastAPI 的 Swagger 页面在开发中可以用来做什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt | 29_hit_at_k.txt,1,1.0,2197.78
+1,similarity,5,RAG 的主要作用是什么？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 01_rag_basics.txt | rag_test.txt | 24_qwen_role.txt,1,0.3333,2066.04
+2,similarity,5,为什么更新 RAG 知识库通常不需要重新训练大语言模型？,01_rag_basics.txt,11_rag_hallucination.txt | 01_rag_basics.txt | rag_test.txt | 12_rag_metadata.txt | 24_qwen_role.txt,1,0.5,2089.44
+3,similarity,5,Embedding 在 RAG 系统中主要负责什么？,02_embeddings.txt,01_rag_basics.txt | 11_rag_hallucination.txt | rag_test.txt | 02_embeddings.txt | 13_embedding_dimension.txt,1,0.25,2144.75
+4,similarity,5,当前项目使用的本地文本向量模型是什么？,02_embeddings.txt,16_vector_metadata_filter.txt | 23_ollama_privacy.txt | 17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 12_rag_metadata.txt,0,0.0,2060.13
+5,similarity,5,本项目使用哪个数据库存储文本向量？,03_chromadb.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 17_topk_tradeoff.txt | 04_similarity.txt | 14_semantic_vs_keyword.txt,0,0.0,2087.96
+6,similarity,5,ChromaDB 除了向量以外还可以保存哪些信息？,03_chromadb.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt | rag_test.txt | 27_sha256.txt,1,1.0,2089.06
+7,similarity,5,Similarity Search 中的 Top-K 表示什么？,04_similarity.txt,04_similarity.txt | 18_similarity_redundancy.txt | 17_topk_tradeoff.txt | 20_mmr_lambda.txt | 10_evaluation.txt,1,1.0,2088.17
+8,similarity,5,普通相似度检索可能存在哪种结果冗余问题？,04_similarity.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 17_topk_tradeoff.txt | 20_mmr_lambda.txt,0,0.0,2097.37
+9,similarity,5,MMR 检索相比普通相似度检索增加了什么考虑？,05_mmr.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 20_mmr_lambda.txt | 05_mmr.txt | 10_evaluation.txt,1,0.25,2103.04
+10,similarity,5,MMR 为什么通常需要先获取 fetch_k 个候选文本？,05_mmr.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt | 10_evaluation.txt | 29_hit_at_k.txt,1,0.5,2161.24
+11,similarity,5,本项目使用什么工具切分长文档？,06_chunking.txt,16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 12_rag_metadata.txt | 14_semantic_vs_keyword.txt | 06_chunking.txt,1,0.2,2204.48
+12,similarity,5,文本切分时保留 overlap 有什么作用？,06_chunking.txt,21_chunk_overlap.txt | 06_chunking.txt | 22_chunk_size.txt | 14_semantic_vs_keyword.txt | 16_vector_metadata_filter.txt,1,0.5,2093.82
+13,similarity,5,本项目使用 Ollama 的主要目的是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | rag_test.txt | 26_streamlit_ui.txt | 16_vector_metadata_filter.txt,1,1.0,2045.71
+14,similarity,5,Ollama 默认的本地服务地址是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | rag_test.txt | 26_streamlit_ui.txt | 03_chromadb.txt,1,1.0,2065.51
+15,similarity,5,系统的后端接口框架和前端框架分别是什么？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 08_fastapi_streamlit.txt | 17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 16_vector_metadata_filter.txt,1,0.5,2087.72
+16,similarity,5,改进后的 sources 会返回哪些来源信息？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 08_fastapi_streamlit.txt | 18_similarity_redundancy.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt,1,0.5,2098.11
+17,similarity,5,系统如何判断一个文件是否已经入库且没有发生变化？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt | 16_vector_metadata_filter.txt | 09_incremental_ingestion.txt,1,0.2,2057.53
+18,similarity,5,文件内容发生变化后增量入库会执行什么流程？,09_incremental_ingestion.txt,26_streamlit_ui.txt | 14_semantic_vs_keyword.txt | 08_fastapi_streamlit.txt | 16_vector_metadata_filter.txt | 11_rag_hallucination.txt,0,0.0,2066.71
+19,similarity,5,Hit@K 主要评价检索系统的什么能力？,10_evaluation.txt,29_hit_at_k.txt | 17_topk_tradeoff.txt | 10_evaluation.txt | 24_qwen_role.txt | 30_mrr.txt,1,0.3333,2050.69
+20,similarity,5,MRR 和 Hit@K 的关注重点有什么区别？,10_evaluation.txt,30_mrr.txt | 10_evaluation.txt | 29_hit_at_k.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt,1,0.5,2055.08
+21,similarity,5,RAG 为什么能够降低大语言模型产生幻觉的风险？,11_rag_hallucination.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt | rag_test.txt | 24_qwen_role.txt,1,1.0,2091.02
+22,similarity,5,如果检索阶段返回了错误文档，生成结果可能出现什么问题？,11_rag_hallucination.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt | 16_vector_metadata_filter.txt | 12_rag_metadata.txt,1,0.5,2098.42
+23,similarity,5,向量数据库中的 metadata 可以用于哪些功能？,12_rag_metadata.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt | 01_rag_basics.txt | 28_manifest.txt,1,0.5,2115.84
+24,similarity,5,PDF 文档的页码信息通常存放在哪里？,12_rag_metadata.txt,12_rag_metadata.txt | 26_streamlit_ui.txt | 11_rag_hallucination.txt | 08_fastapi_streamlit.txt | 16_vector_metadata_filter.txt,1,1.0,2051.69
+25,similarity,5,当前 nomic-embed-text 输出的向量维度是多少？,13_embedding_dimension.txt,13_embedding_dimension.txt | 23_ollama_privacy.txt | 02_embeddings.txt | 07_ollama.txt | 14_semantic_vs_keyword.txt,1,1.0,2074.76
+26,similarity,5,为什么更换 Embedding 模型后通常需要重新构建向量库？,13_embedding_dimension.txt,13_embedding_dimension.txt | 02_embeddings.txt | 07_ollama.txt | 14_semantic_vs_keyword.txt | 23_ollama_privacy.txt,1,1.0,2097.42
+27,similarity,5,语义检索相比关键词检索有什么优势？,14_semantic_vs_keyword.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 16_vector_metadata_filter.txt | 26_streamlit_ui.txt | 17_topk_tradeoff.txt,1,0.5,2096.97
+28,similarity,5,表达方式不同但意思相近的问题为什么仍可能被检索出来？,14_semantic_vs_keyword.txt,17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 09_incremental_ingestion.txt | 13_embedding_dimension.txt | 22_chunk_size.txt,1,0.5,2137.96
+29,similarity,5,ChromaDB 持久化存储有什么作用？,15_chroma_persistence.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt | rag_test.txt | 27_sha256.txt,1,0.5,2098.41
+30,similarity,5,为什么 chroma_db 目录不适合提交到 GitHub？,15_chroma_persistence.txt,15_chroma_persistence.txt | 03_chromadb.txt | 28_manifest.txt | 09_incremental_ingestion.txt | 27_sha256.txt,1,1.0,2101.65
+31,similarity,5,向量数据库的 metadata filter 可以实现什么功能？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt | 18_similarity_redundancy.txt | 20_mmr_lambda.txt,1,1.0,2189.6
+32,similarity,5,增量更新时系统如何定位需要删除的旧版本向量？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 09_incremental_ingestion.txt | 12_rag_metadata.txt | 17_topk_tradeoff.txt | 23_ollama_privacy.txt,1,1.0,2075.73
+33,similarity,5,Top-K 设置得过小可能导致什么问题？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt | 10_evaluation.txt,1,1.0,2055.42
+34,similarity,5,为什么不存在对所有数据集都最优的固定 Top-K？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt | 30_mrr.txt,1,1.0,2088.87
+35,similarity,5,Similarity Search 为什么可能返回多个内容高度重复的 chunk？,18_similarity_redundancy.txt,18_similarity_redundancy.txt | 04_similarity.txt | 21_chunk_overlap.txt | 20_mmr_lambda.txt | 22_chunk_size.txt,1,1.0,2101.67
+36,similarity,5,MMR 能缓解普通相似度检索中的什么问题？,18_similarity_redundancy.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 05_mmr.txt | 18_similarity_redundancy.txt | 10_evaluation.txt,1,0.25,2084.42
+37,similarity,5,MMR 中 fetch_k 和最终 k 的关系通常是什么？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 05_mmr.txt | 29_hit_at_k.txt | 10_evaluation.txt | 20_mmr_lambda.txt,1,1.0,2097.43
+38,similarity,5,本项目的默认 mmr_fetch_k 设置为多少？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt | 17_topk_tradeoff.txt | 29_hit_at_k.txt,1,1.0,2087.64
+39,similarity,5,MMR 中 lambda_mult 用来控制什么？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 29_hit_at_k.txt,1,1.0,2063.68
+40,similarity,5,本项目默认的 lambda_mult 是多少？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 03_chromadb.txt,1,1.0,2046.34
+41,similarity,5,本项目的 chunk_overlap 设置为多少？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 16_vector_metadata_filter.txt | 18_similarity_redundancy.txt,1,1.0,2069.63
+42,similarity,5,chunk_overlap 设置过大会带来什么问题？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 18_similarity_redundancy.txt | 16_vector_metadata_filter.txt,1,1.0,2046.47
+43,similarity,5,本项目默认的 chunk_size 是多少？,22_chunk_size.txt,22_chunk_size.txt | 21_chunk_overlap.txt | 06_chunking.txt | 16_vector_metadata_filter.txt | 18_similarity_redundancy.txt,1,1.0,2055.73
+44,similarity,5,为什么比较检索算法时应该保持 chunk_size 不变？,22_chunk_size.txt,22_chunk_size.txt | 06_chunking.txt | 21_chunk_overlap.txt | 16_vector_metadata_filter.txt | 18_similarity_redundancy.txt,1,1.0,2084.81
+45,similarity,5,使用本地 Ollama 对知识库数据隐私有什么好处？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | rag_test.txt | 28_manifest.txt,1,0.5,2224.04
+46,similarity,5,当前项目中哪些模型通过 Ollama 在本地运行？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 09_incremental_ingestion.txt | 28_manifest.txt,1,0.5,2064.4
+47,similarity,5,Qwen2.5 3B 在这个 RAG 系统中承担什么职责？,24_qwen_role.txt,24_qwen_role.txt | rag_test.txt | 11_rag_hallucination.txt | 01_rag_basics.txt | 10_evaluation.txt,1,1.0,2097.2
+48,similarity,5,Hit@K 和 MRR 主要评测生成模型还是检索器？,24_qwen_role.txt,29_hit_at_k.txt | 10_evaluation.txt | 30_mrr.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt,1,0.2,2087.2
+49,similarity,5,系统的问答 API 路径是什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt | 07_ollama.txt | 23_ollama_privacy.txt,1,1.0,2163.02
+50,similarity,5,FastAPI 的 Swagger 页面在开发中可以用来做什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt | 29_hit_at_k.txt | 17_topk_tradeoff.txt,1,1.0,2054.18
+1,mmr,3,RAG 的主要作用是什么？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 22_chunk_size.txt,0,0.0,2084.21
+2,mmr,3,为什么更新 RAG 知识库通常不需要重新训练大语言模型？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 10_evaluation.txt,0,0.0,2103.72
+3,mmr,3,Embedding 在 RAG 系统中主要负责什么？,02_embeddings.txt,01_rag_basics.txt | 11_rag_hallucination.txt | 13_embedding_dimension.txt,0,0.0,2122.33
+4,mmr,3,当前项目使用的本地文本向量模型是什么？,02_embeddings.txt,16_vector_metadata_filter.txt | 26_streamlit_ui.txt | 04_similarity.txt,0,0.0,2219.23
+5,mmr,3,本项目使用哪个数据库存储文本向量？,03_chromadb.txt,16_vector_metadata_filter.txt | 04_similarity.txt | 26_streamlit_ui.txt,0,0.0,2081.32
+6,mmr,3,ChromaDB 除了向量以外还可以保存哪些信息？,03_chromadb.txt,03_chromadb.txt | 15_chroma_persistence.txt | 17_topk_tradeoff.txt,1,1.0,2102.68
+7,mmr,3,Similarity Search 中的 Top-K 表示什么？,04_similarity.txt,04_similarity.txt | 18_similarity_redundancy.txt | 17_topk_tradeoff.txt,1,1.0,2083.0
+8,mmr,3,普通相似度检索可能存在哪种结果冗余问题？,04_similarity.txt,18_similarity_redundancy.txt | 26_streamlit_ui.txt | 27_sha256.txt,0,0.0,2083.38
+9,mmr,3,MMR 检索相比普通相似度检索增加了什么考虑？,05_mmr.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 10_evaluation.txt,0,0.0,2108.87
+10,mmr,3,MMR 为什么通常需要先获取 fetch_k 个候选文本？,05_mmr.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 24_qwen_role.txt,0,0.0,2146.38
+11,mmr,3,本项目使用什么工具切分长文档？,06_chunking.txt,16_vector_metadata_filter.txt | 04_similarity.txt | 19_mmr_fetchk.txt,0,0.0,2191.08
+12,mmr,3,文本切分时保留 overlap 有什么作用？,06_chunking.txt,21_chunk_overlap.txt | 14_semantic_vs_keyword.txt | 12_rag_metadata.txt,0,0.0,2106.3
+13,mmr,3,本项目使用 Ollama 的主要目的是什么？,07_ollama.txt,07_ollama.txt | 26_streamlit_ui.txt | 22_chunk_size.txt,1,1.0,2070.24
+14,mmr,3,Ollama 默认的本地服务地址是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt,1,1.0,2096.12
+15,mmr,3,系统的后端接口框架和前端框架分别是什么？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 22_chunk_size.txt | 04_similarity.txt,0,0.0,2110.62
+16,mmr,3,改进后的 sources 会返回哪些来源信息？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 18_similarity_redundancy.txt | 12_rag_metadata.txt,0,0.0,2078.32
+17,mmr,3,系统如何判断一个文件是否已经入库且没有发生变化？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 12_rag_metadata.txt | 08_fastapi_streamlit.txt,0,0.0,2094.98
+18,mmr,3,文件内容发生变化后增量入库会执行什么流程？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 08_fastapi_streamlit.txt | 12_rag_metadata.txt,0,0.0,2069.76
+19,mmr,3,Hit@K 主要评价检索系统的什么能力？,10_evaluation.txt,29_hit_at_k.txt | 24_qwen_role.txt | 26_streamlit_ui.txt,0,0.0,2072.14
+20,mmr,3,MRR 和 Hit@K 的关注重点有什么区别？,10_evaluation.txt,30_mrr.txt | 29_hit_at_k.txt | 24_qwen_role.txt,0,0.0,2104.65
+21,mmr,3,RAG 为什么能够降低大语言模型产生幻觉的风险？,11_rag_hallucination.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 25_fastapi_endpoint.txt,1,1.0,2079.31
+22,mmr,3,如果检索阶段返回了错误文档，生成结果可能出现什么问题？,11_rag_hallucination.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 08_fastapi_streamlit.txt,1,0.5,2076.87
+23,mmr,3,向量数据库中的 metadata 可以用于哪些功能？,12_rag_metadata.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 20_mmr_lambda.txt,1,0.5,2096.29
+24,mmr,3,PDF 文档的页码信息通常存放在哪里？,12_rag_metadata.txt,12_rag_metadata.txt | 26_streamlit_ui.txt | 04_similarity.txt,1,1.0,2078.59
+25,mmr,3,当前 nomic-embed-text 输出的向量维度是多少？,13_embedding_dimension.txt,13_embedding_dimension.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt,1,1.0,2106.93
+26,mmr,3,为什么更换 Embedding 模型后通常需要重新构建向量库？,13_embedding_dimension.txt,13_embedding_dimension.txt | 07_ollama.txt | 03_chromadb.txt,1,1.0,2108.56
+27,mmr,3,语义检索相比关键词检索有什么优势？,14_semantic_vs_keyword.txt,18_similarity_redundancy.txt | 16_vector_metadata_filter.txt | 26_streamlit_ui.txt,0,0.0,2062.48
+28,mmr,3,表达方式不同但意思相近的问题为什么仍可能被检索出来？,14_semantic_vs_keyword.txt,14_semantic_vs_keyword.txt | 22_chunk_size.txt | 26_streamlit_ui.txt,1,1.0,2078.34
+29,mmr,3,ChromaDB 持久化存储有什么作用？,15_chroma_persistence.txt,03_chromadb.txt | 27_sha256.txt | 30_mrr.txt,0,0.0,2079.32
+30,mmr,3,为什么 chroma_db 目录不适合提交到 GitHub？,15_chroma_persistence.txt,15_chroma_persistence.txt | 03_chromadb.txt | 28_manifest.txt,1,1.0,2073.88
+31,mmr,3,向量数据库的 metadata filter 可以实现什么功能？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 20_mmr_lambda.txt | 08_fastapi_streamlit.txt,1,1.0,2077.57
+32,mmr,3,增量更新时系统如何定位需要删除的旧版本向量？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 26_streamlit_ui.txt,1,1.0,2101.63
+33,mmr,3,Top-K 设置得过小可能导致什么问题？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 26_streamlit_ui.txt,1,1.0,2154.92
+34,mmr,3,为什么不存在对所有数据集都最优的固定 Top-K？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 26_streamlit_ui.txt,1,1.0,2184.1
+35,mmr,3,Similarity Search 为什么可能返回多个内容高度重复的 chunk？,18_similarity_redundancy.txt,18_similarity_redundancy.txt | 04_similarity.txt | 22_chunk_size.txt,1,1.0,2109.95
+36,mmr,3,MMR 能缓解普通相似度检索中的什么问题？,18_similarity_redundancy.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 10_evaluation.txt,1,0.5,2230.25
+37,mmr,3,MMR 中 fetch_k 和最终 k 的关系通常是什么？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 29_hit_at_k.txt | 24_qwen_role.txt,1,1.0,2079.86
+38,mmr,3,本项目的默认 mmr_fetch_k 设置为多少？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 24_qwen_role.txt,1,1.0,2068.11
+39,mmr,3,MMR 中 lambda_mult 用来控制什么？,20_mmr_lambda.txt,20_mmr_lambda.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt,1,1.0,2072.73
+40,mmr,3,本项目默认的 lambda_mult 是多少？,20_mmr_lambda.txt,20_mmr_lambda.txt | 16_vector_metadata_filter.txt | 26_streamlit_ui.txt,1,1.0,2101.66
+41,mmr,3,本项目的 chunk_overlap 设置为多少？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 16_vector_metadata_filter.txt,1,1.0,2065.73
+42,mmr,3,chunk_overlap 设置过大会带来什么问题？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt,1,1.0,2079.07
+43,mmr,3,本项目默认的 chunk_size 是多少？,22_chunk_size.txt,22_chunk_size.txt | 16_vector_metadata_filter.txt | 20_mmr_lambda.txt,1,1.0,2102.7
+44,mmr,3,为什么比较检索算法时应该保持 chunk_size 不变？,22_chunk_size.txt,22_chunk_size.txt | 18_similarity_redundancy.txt | 12_rag_metadata.txt,1,1.0,2107.38
+45,mmr,3,使用本地 Ollama 对知识库数据隐私有什么好处？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt,1,0.5,2138.84
+46,mmr,3,当前项目中哪些模型通过 Ollama 在本地运行？,23_ollama_privacy.txt,07_ollama.txt | 26_streamlit_ui.txt | 04_similarity.txt,0,0.0,2076.54
+47,mmr,3,Qwen2.5 3B 在这个 RAG 系统中承担什么职责？,24_qwen_role.txt,24_qwen_role.txt | 12_rag_metadata.txt | 23_ollama_privacy.txt,1,1.0,2100.86
+48,mmr,3,Hit@K 和 MRR 主要评测生成模型还是检索器？,24_qwen_role.txt,29_hit_at_k.txt | 30_mrr.txt | 24_qwen_role.txt,1,0.3333,2107.18
+49,mmr,3,系统的问答 API 路径是什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 07_ollama.txt | 16_vector_metadata_filter.txt,1,1.0,2114.05
+50,mmr,3,FastAPI 的 Swagger 页面在开发中可以用来做什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 26_streamlit_ui.txt | 29_hit_at_k.txt,1,1.0,2104.06
+1,mmr,4,RAG 的主要作用是什么？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 10_evaluation.txt | 22_chunk_size.txt,0,0.0,2141.69
+2,mmr,4,为什么更新 RAG 知识库通常不需要重新训练大语言模型？,01_rag_basics.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt | 10_evaluation.txt,1,0.5,2081.06
+3,mmr,4,Embedding 在 RAG 系统中主要负责什么？,02_embeddings.txt,01_rag_basics.txt | 11_rag_hallucination.txt | 13_embedding_dimension.txt | 12_rag_metadata.txt,0,0.0,2099.07
+4,mmr,4,当前项目使用的本地文本向量模型是什么？,02_embeddings.txt,16_vector_metadata_filter.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 04_similarity.txt,0,0.0,2105.34
+5,mmr,4,本项目使用哪个数据库存储文本向量？,03_chromadb.txt,16_vector_metadata_filter.txt | 04_similarity.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt,0,0.0,2111.51
+6,mmr,4,ChromaDB 除了向量以外还可以保存哪些信息？,03_chromadb.txt,03_chromadb.txt | 15_chroma_persistence.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt,1,1.0,2191.8
+7,mmr,4,Similarity Search 中的 Top-K 表示什么？,04_similarity.txt,04_similarity.txt | 18_similarity_redundancy.txt | 17_topk_tradeoff.txt | 03_chromadb.txt,1,1.0,2115.47
+8,mmr,4,普通相似度检索可能存在哪种结果冗余问题？,04_similarity.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 27_sha256.txt,0,0.0,2107.82
+9,mmr,4,MMR 检索相比普通相似度检索增加了什么考虑？,05_mmr.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 10_evaluation.txt | 16_vector_metadata_filter.txt,0,0.0,2091.88
+10,mmr,4,MMR 为什么通常需要先获取 fetch_k 个候选文本？,05_mmr.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt | 24_qwen_role.txt,1,0.5,2075.78
+11,mmr,4,本项目使用什么工具切分长文档？,06_chunking.txt,16_vector_metadata_filter.txt | 14_semantic_vs_keyword.txt | 04_similarity.txt | 19_mmr_fetchk.txt,0,0.0,2110.65
+12,mmr,4,文本切分时保留 overlap 有什么作用？,06_chunking.txt,21_chunk_overlap.txt | 14_semantic_vs_keyword.txt | 12_rag_metadata.txt | 04_similarity.txt,0,0.0,2084.79
+13,mmr,4,本项目使用 Ollama 的主要目的是什么？,07_ollama.txt,07_ollama.txt | 26_streamlit_ui.txt | 20_mmr_lambda.txt | 22_chunk_size.txt,1,1.0,2074.03
+14,mmr,4,Ollama 默认的本地服务地址是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 17_topk_tradeoff.txt,1,1.0,2099.14
+15,mmr,4,系统的后端接口框架和前端框架分别是什么？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 22_chunk_size.txt | 04_similarity.txt | 11_rag_hallucination.txt,0,0.0,2215.83
+16,mmr,4,改进后的 sources 会返回哪些来源信息？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 18_similarity_redundancy.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt,0,0.0,2091.95
+17,mmr,4,系统如何判断一个文件是否已经入库且没有发生变化？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 12_rag_metadata.txt | 08_fastapi_streamlit.txt | 18_similarity_redundancy.txt,0,0.0,2080.4
+18,mmr,4,文件内容发生变化后增量入库会执行什么流程？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 08_fastapi_streamlit.txt | 12_rag_metadata.txt | 18_similarity_redundancy.txt,0,0.0,2108.37
+19,mmr,4,Hit@K 主要评价检索系统的什么能力？,10_evaluation.txt,29_hit_at_k.txt | 24_qwen_role.txt | 26_streamlit_ui.txt | 04_similarity.txt,0,0.0,2097.25
+20,mmr,4,MRR 和 Hit@K 的关注重点有什么区别？,10_evaluation.txt,30_mrr.txt | 29_hit_at_k.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt,0,0.0,2226.13
+21,mmr,4,RAG 为什么能够降低大语言模型产生幻觉的风险？,11_rag_hallucination.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt | 25_fastapi_endpoint.txt,1,1.0,2071.62
+22,mmr,4,如果检索阶段返回了错误文档，生成结果可能出现什么问题？,11_rag_hallucination.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 04_similarity.txt | 08_fastapi_streamlit.txt,1,0.5,2091.42
+23,mmr,4,向量数据库中的 metadata 可以用于哪些功能？,12_rag_metadata.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt | 20_mmr_lambda.txt,1,0.5,2096.07
+24,mmr,4,PDF 文档的页码信息通常存放在哪里？,12_rag_metadata.txt,12_rag_metadata.txt | 26_streamlit_ui.txt | 14_semantic_vs_keyword.txt | 04_similarity.txt,1,1.0,2155.2
+25,mmr,4,当前 nomic-embed-text 输出的向量维度是多少？,13_embedding_dimension.txt,13_embedding_dimension.txt | 23_ollama_privacy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt,1,1.0,2079.96
+26,mmr,4,为什么更换 Embedding 模型后通常需要重新构建向量库？,13_embedding_dimension.txt,13_embedding_dimension.txt | 02_embeddings.txt | 07_ollama.txt | 03_chromadb.txt,1,1.0,2080.45
+27,mmr,4,语义检索相比关键词检索有什么优势？,14_semantic_vs_keyword.txt,18_similarity_redundancy.txt | 16_vector_metadata_filter.txt | 26_streamlit_ui.txt | 11_rag_hallucination.txt,0,0.0,2109.98
+28,mmr,4,表达方式不同但意思相近的问题为什么仍可能被检索出来？,14_semantic_vs_keyword.txt,17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 22_chunk_size.txt | 26_streamlit_ui.txt,1,0.5,2211.46
+29,mmr,4,ChromaDB 持久化存储有什么作用？,15_chroma_persistence.txt,03_chromadb.txt | 15_chroma_persistence.txt | 27_sha256.txt | 30_mrr.txt,1,0.5,2081.01
+30,mmr,4,为什么 chroma_db 目录不适合提交到 GitHub？,15_chroma_persistence.txt,15_chroma_persistence.txt | 03_chromadb.txt | 28_manifest.txt | 17_topk_tradeoff.txt,1,1.0,2109.67
+31,mmr,4,向量数据库的 metadata filter 可以实现什么功能？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 20_mmr_lambda.txt | 08_fastapi_streamlit.txt,1,1.0,2077.54
+32,mmr,4,增量更新时系统如何定位需要删除的旧版本向量？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt,1,1.0,2082.3
+33,mmr,4,Top-K 设置得过小可能导致什么问题？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 26_streamlit_ui.txt,1,1.0,2097.52
+34,mmr,4,为什么不存在对所有数据集都最优的固定 Top-K？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 22_chunk_size.txt | 26_streamlit_ui.txt,1,1.0,2075.63
+35,mmr,4,Similarity Search 为什么可能返回多个内容高度重复的 chunk？,18_similarity_redundancy.txt,18_similarity_redundancy.txt | 04_similarity.txt | 22_chunk_size.txt | 03_chromadb.txt,1,1.0,2072.95
+36,mmr,4,MMR 能缓解普通相似度检索中的什么问题？,18_similarity_redundancy.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 18_similarity_redundancy.txt | 10_evaluation.txt,1,0.3333,2098.48
+37,mmr,4,MMR 中 fetch_k 和最终 k 的关系通常是什么？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 29_hit_at_k.txt | 24_qwen_role.txt | 18_similarity_redundancy.txt,1,1.0,2195.66
+38,mmr,4,本项目的默认 mmr_fetch_k 设置为多少？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 24_qwen_role.txt | 16_vector_metadata_filter.txt,1,1.0,2102.95
+39,mmr,4,MMR 中 lambda_mult 用来控制什么？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt,1,1.0,2094.68
+40,mmr,4,本项目默认的 lambda_mult 是多少？,20_mmr_lambda.txt,20_mmr_lambda.txt | 16_vector_metadata_filter.txt | 07_ollama.txt | 26_streamlit_ui.txt,1,1.0,2203.15
+41,mmr,4,本项目的 chunk_overlap 设置为多少？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 16_vector_metadata_filter.txt,1,1.0,2182.14
+42,mmr,4,chunk_overlap 设置过大会带来什么问题？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 20_mmr_lambda.txt,1,1.0,2202.42
+43,mmr,4,本项目默认的 chunk_size 是多少？,22_chunk_size.txt,22_chunk_size.txt | 16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 20_mmr_lambda.txt,1,1.0,2124.13
+44,mmr,4,为什么比较检索算法时应该保持 chunk_size 不变？,22_chunk_size.txt,22_chunk_size.txt | 18_similarity_redundancy.txt | 12_rag_metadata.txt | 27_sha256.txt,1,1.0,2094.8
+45,mmr,4,使用本地 Ollama 对知识库数据隐私有什么好处？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 16_vector_metadata_filter.txt,1,0.5,2113.41
+46,mmr,4,当前项目中哪些模型通过 Ollama 在本地运行？,23_ollama_privacy.txt,07_ollama.txt | 26_streamlit_ui.txt | 16_vector_metadata_filter.txt | 04_similarity.txt,0,0.0,2191.52
+47,mmr,4,Qwen2.5 3B 在这个 RAG 系统中承担什么职责？,24_qwen_role.txt,24_qwen_role.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt | 23_ollama_privacy.txt,1,1.0,2086.97
+48,mmr,4,Hit@K 和 MRR 主要评测生成模型还是检索器？,24_qwen_role.txt,29_hit_at_k.txt | 30_mrr.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt,1,0.25,2107.94
+49,mmr,4,系统的问答 API 路径是什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 26_streamlit_ui.txt | 07_ollama.txt | 16_vector_metadata_filter.txt,1,1.0,2073.93
+50,mmr,4,FastAPI 的 Swagger 页面在开发中可以用来做什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 26_streamlit_ui.txt | 29_hit_at_k.txt | 15_chroma_persistence.txt,1,1.0,2104.42
+1,mmr,5,RAG 的主要作用是什么？,01_rag_basics.txt,11_rag_hallucination.txt | 12_rag_metadata.txt | 01_rag_basics.txt | 10_evaluation.txt | 22_chunk_size.txt,1,0.3333,2127.43
+2,mmr,5,为什么更新 RAG 知识库通常不需要重新训练大语言模型？,01_rag_basics.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt | 24_qwen_role.txt | 10_evaluation.txt,1,0.5,2128.51
+3,mmr,5,Embedding 在 RAG 系统中主要负责什么？,02_embeddings.txt,01_rag_basics.txt | 11_rag_hallucination.txt | rag_test.txt | 13_embedding_dimension.txt | 12_rag_metadata.txt,0,0.0,2119.11
+4,mmr,5,当前项目使用的本地文本向量模型是什么？,02_embeddings.txt,16_vector_metadata_filter.txt | 23_ollama_privacy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 04_similarity.txt,0,0.0,2099.84
+5,mmr,5,本项目使用哪个数据库存储文本向量？,03_chromadb.txt,16_vector_metadata_filter.txt | 04_similarity.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 20_mmr_lambda.txt,0,0.0,2078.44
+6,mmr,5,ChromaDB 除了向量以外还可以保存哪些信息？,03_chromadb.txt,03_chromadb.txt | 15_chroma_persistence.txt | 27_sha256.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt,1,1.0,2108.0
+7,mmr,5,Similarity Search 中的 Top-K 表示什么？,04_similarity.txt,04_similarity.txt | 18_similarity_redundancy.txt | 17_topk_tradeoff.txt | 10_evaluation.txt | 03_chromadb.txt,1,1.0,2102.79
+8,mmr,5,普通相似度检索可能存在哪种结果冗余问题？,04_similarity.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 17_topk_tradeoff.txt | 27_sha256.txt,0,0.0,2095.27
+9,mmr,5,MMR 检索相比普通相似度检索增加了什么考虑？,05_mmr.txt,19_mmr_fetchk.txt | 18_similarity_redundancy.txt | 20_mmr_lambda.txt | 10_evaluation.txt | 16_vector_metadata_filter.txt,0,0.0,2080.84
+10,mmr,5,MMR 为什么通常需要先获取 fetch_k 个候选文本？,05_mmr.txt,19_mmr_fetchk.txt | 05_mmr.txt | 20_mmr_lambda.txt | 29_hit_at_k.txt | 24_qwen_role.txt,1,0.5,2105.52
+11,mmr,5,本项目使用什么工具切分长文档？,06_chunking.txt,16_vector_metadata_filter.txt | 14_semantic_vs_keyword.txt | 04_similarity.txt | 22_chunk_size.txt | 19_mmr_fetchk.txt,0,0.0,2064.54
+12,mmr,5,文本切分时保留 overlap 有什么作用？,06_chunking.txt,21_chunk_overlap.txt | 06_chunking.txt | 14_semantic_vs_keyword.txt | 12_rag_metadata.txt | 04_similarity.txt,1,0.5,2078.78
+13,mmr,5,本项目使用 Ollama 的主要目的是什么？,07_ollama.txt,07_ollama.txt | 26_streamlit_ui.txt | 16_vector_metadata_filter.txt | 20_mmr_lambda.txt | 22_chunk_size.txt,1,1.0,2116.73
+14,mmr,5,Ollama 默认的本地服务地址是什么？,07_ollama.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 03_chromadb.txt | 17_topk_tradeoff.txt,1,1.0,2067.9
+15,mmr,5,系统的后端接口框架和前端框架分别是什么？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 16_vector_metadata_filter.txt | 22_chunk_size.txt | 04_similarity.txt | 11_rag_hallucination.txt,0,0.0,2102.71
+16,mmr,5,改进后的 sources 会返回哪些来源信息？,08_fastapi_streamlit.txt,26_streamlit_ui.txt | 18_similarity_redundancy.txt | 11_rag_hallucination.txt | 17_topk_tradeoff.txt | 12_rag_metadata.txt,0,0.0,2114.88
+17,mmr,5,系统如何判断一个文件是否已经入库且没有发生变化？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 12_rag_metadata.txt | 09_incremental_ingestion.txt | 08_fastapi_streamlit.txt | 18_similarity_redundancy.txt,1,0.3333,2112.01
+18,mmr,5,文件内容发生变化后增量入库会执行什么流程？,09_incremental_ingestion.txt,14_semantic_vs_keyword.txt | 08_fastapi_streamlit.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt | 18_similarity_redundancy.txt,0,0.0,2171.85
+19,mmr,5,Hit@K 主要评价检索系统的什么能力？,10_evaluation.txt,29_hit_at_k.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt | 26_streamlit_ui.txt | 04_similarity.txt,0,0.0,2199.07
+20,mmr,5,MRR 和 Hit@K 的关注重点有什么区别？,10_evaluation.txt,30_mrr.txt | 10_evaluation.txt | 29_hit_at_k.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt,1,0.5,2196.63
+21,mmr,5,RAG 为什么能够降低大语言模型产生幻觉的风险？,11_rag_hallucination.txt,11_rag_hallucination.txt | 01_rag_basics.txt | 12_rag_metadata.txt | 10_evaluation.txt | 25_fastapi_endpoint.txt,1,1.0,2098.83
+22,mmr,5,如果检索阶段返回了错误文档，生成结果可能出现什么问题？,11_rag_hallucination.txt,14_semantic_vs_keyword.txt | 11_rag_hallucination.txt | 09_incremental_ingestion.txt | 04_similarity.txt | 08_fastapi_streamlit.txt,1,0.5,2122.23
+23,mmr,5,向量数据库中的 metadata 可以用于哪些功能？,12_rag_metadata.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 03_chromadb.txt | 17_topk_tradeoff.txt | 20_mmr_lambda.txt,1,0.5,2176.02
+24,mmr,5,PDF 文档的页码信息通常存放在哪里？,12_rag_metadata.txt,12_rag_metadata.txt | 26_streamlit_ui.txt | 11_rag_hallucination.txt | 14_semantic_vs_keyword.txt | 04_similarity.txt,1,1.0,2158.67
+25,mmr,5,当前 nomic-embed-text 输出的向量维度是多少？,13_embedding_dimension.txt,13_embedding_dimension.txt | 23_ollama_privacy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt | 28_manifest.txt,1,1.0,2080.63
+26,mmr,5,为什么更换 Embedding 模型后通常需要重新构建向量库？,13_embedding_dimension.txt,13_embedding_dimension.txt | 02_embeddings.txt | 07_ollama.txt | 14_semantic_vs_keyword.txt | 03_chromadb.txt,1,1.0,2099.64
+27,mmr,5,语义检索相比关键词检索有什么优势？,14_semantic_vs_keyword.txt,18_similarity_redundancy.txt | 14_semantic_vs_keyword.txt | 16_vector_metadata_filter.txt | 26_streamlit_ui.txt | 11_rag_hallucination.txt,1,0.5,2104.16
+28,mmr,5,表达方式不同但意思相近的问题为什么仍可能被检索出来？,14_semantic_vs_keyword.txt,17_topk_tradeoff.txt | 14_semantic_vs_keyword.txt | 09_incremental_ingestion.txt | 22_chunk_size.txt | 26_streamlit_ui.txt,1,0.5,2076.8
+29,mmr,5,ChromaDB 持久化存储有什么作用？,15_chroma_persistence.txt,03_chromadb.txt | 15_chroma_persistence.txt | 24_qwen_role.txt | 27_sha256.txt | 30_mrr.txt,1,0.5,2096.58
+30,mmr,5,为什么 chroma_db 目录不适合提交到 GitHub？,15_chroma_persistence.txt,15_chroma_persistence.txt | 03_chromadb.txt | 28_manifest.txt | 07_ollama.txt | 17_topk_tradeoff.txt,1,1.0,2108.6
+31,mmr,5,向量数据库的 metadata filter 可以实现什么功能？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 12_rag_metadata.txt | 20_mmr_lambda.txt | 24_qwen_role.txt | 08_fastapi_streamlit.txt,1,1.0,2214.78
+32,mmr,5,增量更新时系统如何定位需要删除的旧版本向量？,16_vector_metadata_filter.txt,16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 23_ollama_privacy.txt | 14_semantic_vs_keyword.txt | 26_streamlit_ui.txt,1,1.0,2078.47
+33,mmr,5,Top-K 设置得过小可能导致什么问题？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt | 26_streamlit_ui.txt,1,1.0,2089.89
+34,mmr,5,为什么不存在对所有数据集都最优的固定 Top-K？,17_topk_tradeoff.txt,17_topk_tradeoff.txt | 04_similarity.txt | 19_mmr_fetchk.txt | 22_chunk_size.txt | 26_streamlit_ui.txt,1,1.0,2103.7
+35,mmr,5,Similarity Search 为什么可能返回多个内容高度重复的 chunk？,18_similarity_redundancy.txt,18_similarity_redundancy.txt | 04_similarity.txt | 21_chunk_overlap.txt | 22_chunk_size.txt | 03_chromadb.txt,1,1.0,2069.79
+36,mmr,5,MMR 能缓解普通相似度检索中的什么问题？,18_similarity_redundancy.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 18_similarity_redundancy.txt | 10_evaluation.txt | 29_hit_at_k.txt,1,0.3333,2079.78
+37,mmr,5,MMR 中 fetch_k 和最终 k 的关系通常是什么？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 29_hit_at_k.txt | 30_mrr.txt | 24_qwen_role.txt | 18_similarity_redundancy.txt,1,1.0,2114.91
+38,mmr,5,本项目的默认 mmr_fetch_k 设置为多少？,19_mmr_fetchk.txt,19_mmr_fetchk.txt | 20_mmr_lambda.txt | 29_hit_at_k.txt | 24_qwen_role.txt | 16_vector_metadata_filter.txt,1,1.0,2174.58
+39,mmr,5,MMR 中 lambda_mult 用来控制什么？,20_mmr_lambda.txt,20_mmr_lambda.txt | 05_mmr.txt | 19_mmr_fetchk.txt | 29_hit_at_k.txt | 16_vector_metadata_filter.txt,1,1.0,2121.37
+40,mmr,5,本项目默认的 lambda_mult 是多少？,20_mmr_lambda.txt,20_mmr_lambda.txt | 16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 07_ollama.txt | 26_streamlit_ui.txt,1,1.0,2114.5
+41,mmr,5,本项目的 chunk_overlap 设置为多少？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 16_vector_metadata_filter.txt | 20_mmr_lambda.txt,1,1.0,2116.69
+42,mmr,5,chunk_overlap 设置过大会带来什么问题？,21_chunk_overlap.txt,21_chunk_overlap.txt | 22_chunk_size.txt | 06_chunking.txt | 16_vector_metadata_filter.txt | 20_mmr_lambda.txt,1,1.0,2180.96
+43,mmr,5,本项目默认的 chunk_size 是多少？,22_chunk_size.txt,22_chunk_size.txt | 21_chunk_overlap.txt | 16_vector_metadata_filter.txt | 17_topk_tradeoff.txt | 20_mmr_lambda.txt,1,1.0,2104.8
+44,mmr,5,为什么比较检索算法时应该保持 chunk_size 不变？,22_chunk_size.txt,22_chunk_size.txt | 06_chunking.txt | 18_similarity_redundancy.txt | 12_rag_metadata.txt | 27_sha256.txt,1,1.0,2217.55
+45,mmr,5,使用本地 Ollama 对知识库数据隐私有什么好处？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | rag_test.txt | 16_vector_metadata_filter.txt,1,0.5,2083.68
+46,mmr,5,当前项目中哪些模型通过 Ollama 在本地运行？,23_ollama_privacy.txt,07_ollama.txt | 23_ollama_privacy.txt | 26_streamlit_ui.txt | 16_vector_metadata_filter.txt | 04_similarity.txt,1,0.5,2124.54
+47,mmr,5,Qwen2.5 3B 在这个 RAG 系统中承担什么职责？,24_qwen_role.txt,24_qwen_role.txt | 11_rag_hallucination.txt | 12_rag_metadata.txt | 23_ollama_privacy.txt | 25_fastapi_endpoint.txt,1,1.0,2123.41
+48,mmr,5,Hit@K 和 MRR 主要评测生成模型还是检索器？,24_qwen_role.txt,29_hit_at_k.txt | 10_evaluation.txt | 30_mrr.txt | 17_topk_tradeoff.txt | 24_qwen_role.txt,1,0.2,2160.13
+49,mmr,5,系统的问答 API 路径是什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 26_streamlit_ui.txt | 07_ollama.txt | 16_vector_metadata_filter.txt | 24_qwen_role.txt,1,1.0,2184.33
+50,mmr,5,FastAPI 的 Swagger 页面在开发中可以用来做什么？,25_fastapi_endpoint.txt,25_fastapi_endpoint.txt | 08_fastapi_streamlit.txt | 26_streamlit_ui.txt | 29_hit_at_k.txt | 15_chroma_persistence.txt,1,1.0,2180.27

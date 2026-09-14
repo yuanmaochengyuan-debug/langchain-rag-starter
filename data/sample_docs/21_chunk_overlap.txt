@@ -1,0 +1,9 @@
+Chunk Overlap
+
+文本切分时，相邻 chunk 可以保留部分重复内容，这个参数称为 chunk_overlap。
+
+本项目的 chunk_overlap 为 50。
+其目的在于避免一个完整语义刚好跨越两个文本块边界时，被完全拆开。
+
+Overlap 太小可能造成上下文割裂。
+Overlap 太大则会增加重复向量数量，并可能加剧 Similarity 检索返回相邻重复文本的问题。

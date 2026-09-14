@@ -1,0 +1,9 @@
+Qwen 在 RAG 中的职责
+
+本项目使用 qwen2.5:3b 作为生成模型。
+
+Qwen 不负责从 ChromaDB 中搜索文档。
+检索器首先取得相关文本块，然后 LangChain 把检索上下文与用户问题一起传递给 Qwen。
+
+因此 RAG 可以把检索模块与生成模块分开评测。
+Hit@K 和 MRR 主要衡量 Retriever，而最终回答质量还会受到大语言模型能力和 Prompt 的影响。

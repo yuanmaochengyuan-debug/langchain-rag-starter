@@ -1,0 +1,10 @@
+增量入库 Manifest
+
+系统把已经处理过的文件及其 SHA-256 保存到 ingestion_manifest.json。
+
+该文件位于 chroma_db 目录下。
+运行 ingest.py 时，程序先加载 manifest，再计算当前文件的 Hash。
+
+如果文件名和 Hash 与记录一致，则文件未变化。
+如果同名文件的 Hash 不同，则进入 UPDATE 流程。
+如果 manifest 中没有该文件，则进入 NEW 流程。

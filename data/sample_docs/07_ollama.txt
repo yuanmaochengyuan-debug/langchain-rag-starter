@@ -1,0 +1,14 @@
+Ollama 本地模型部署
+
+Ollama 是一个用于在本地运行大语言模型和 Embedding 模型的工具。
+本项目使用 Ollama 替代原始项目中的 Gemini 云端模型，从而避免依赖外部 API Key。
+
+当前回答模型为 Qwen2.5 3B，模型名称是 qwen2.5:3b。
+Embedding 模型为 nomic-embed-text。
+两个模型都运行在本地 Ollama 服务中。
+
+Ollama 默认本地服务地址为 http://localhost:11434。
+LangChain 可以通过 ChatOllama 调用生成模型，也可以通过 OllamaEmbeddings 调用 Embedding 模型。
+
+本地部署的优点包括数据不必上传到外部服务、开发阶段不产生 API 调用费用，并且方便离线演示。
+缺点是推理速度和可运行模型规模受本机 CPU、GPU 和内存资源限制。

@@ -1,0 +1,14 @@
+FastAPI 与 Streamlit
+
+本项目采用 FastAPI 提供后端问答接口，采用 Streamlit 提供轻量级 Web 前端。
+前后端通过 HTTP 请求进行通信。
+
+FastAPI 的查询接口为 POST /api/v1/query。
+请求体包含 question 字段，后端调用 RAG 链完成检索和生成，再返回 answer 和 sources。
+
+sources 不再只是文件路径字符串。
+改进后的接口会返回文件名、页码和命中的原文 snippet，从而提高答案可追溯性。
+对于 TXT 文件，页码可以为空；对于 PDF 文件，可以利用加载器产生的 page metadata 显示页码。
+
+Streamlit 前端会把检索来源显示为可展开区域。
+用户可以查看回答，也可以展开来源查看被检索到的原始文本片段。
